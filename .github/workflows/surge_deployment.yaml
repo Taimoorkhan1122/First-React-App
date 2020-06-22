@@ -1,0 +1,24 @@
+name: Deploy react app
+
+on: [push]
+
+jobs:
+    build:
+        runs_on: Ubuntu-latest
+        name: Deploying react app to surge
+        steps:
+            - uses actions/checkout@v2
+            - name: Install Node.jobs
+              uses: actions/setup-node@v2-beta
+              with:
+                node-version: 12
+            - name: Preparing for Yarn Installlation
+              run: curl curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            - name: Install Yarn
+              run: sudo apt update && sudo apt install yarn
+            - name: Build React app
+              run: yarn build
+            - name: Install surge
+              run: npm install -g surge
+            - name: Run surge
+              run: surge ./Taimoorkhan_react_app.surge.sh --token ${{secrets.SURGE_TOKEN}}
