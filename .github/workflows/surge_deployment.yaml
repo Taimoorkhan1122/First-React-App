@@ -7,7 +7,7 @@ jobs:
         runs-on: Ubuntu-latest
         name: Deploying react app to surge
         steps:
-            - uses actions/checkout@v2
+            - uses: actions/checkout@v2
             - name: Install Node.jobs
               uses: actions/setup-node@v2-beta
               with:
