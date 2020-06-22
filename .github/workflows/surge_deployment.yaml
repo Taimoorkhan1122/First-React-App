@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
     build:
-        runs_on: Ubuntu-latest
+        runs-on: Ubuntu-latest
         name: Deploying react app to surge
         steps:
             - uses actions/checkout@v2
