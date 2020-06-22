@@ -22,4 +22,4 @@ jobs:
             - name: Install surge
               run: npm install -g surge
             - name: Run surge
-              run: surge ./Taimoorkhan_react_app.surge.sh --token ${{secrets.SURGE_TOKEN}}
+              run: surge ./build Taimoorkhan_react_app.surge.sh --token ${{secrets.SURGE_TOKEN}}
