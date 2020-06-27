@@ -16,5 +16,4 @@ function Hi() {
   return <App/> 
 }
 
-
 ReactDOM.render(<Hi/>, document.querySelector('#root'));

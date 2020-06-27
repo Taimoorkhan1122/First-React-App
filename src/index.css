@@ -11,8 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root {}
 
-#root {
+.card {
   display: flex;
   margin: auto;
   align-items: center;
