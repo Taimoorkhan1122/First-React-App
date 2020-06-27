@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  padding: 1em;
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(238, 66, 66);
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 5px 3px 5px #2a2a2a;
+}
+
+#root div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+ border-radius: 5px;
+ border: none; 
+ line-height: 1.5rem;
+ padding: 0 5px;
+ color: rgb(255, 116, 116);
+ /* text-align: center; */
+}
+
+h1, h2 {
+  margin: 0px ;
+}

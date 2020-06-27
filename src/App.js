@@ -2,25 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(props) { //props is a javascript object and we can properties of  props object just 
+                      // like normal js objects
+  return <div className="App">
+      Hello from {props.name} <br/> 
+      Welcome <h1>{props.username}</h1>
     </div>
-  );
-}
+} 
 
 export default App;
