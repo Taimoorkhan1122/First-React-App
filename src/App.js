@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import './App.css';
 import './Room.css';
-import Room from './Room.js'
+// import Room from './Room.js'
 import ThemeContext from './context/ThemeContext'
+import Header from './components/Header';
+import Main from './components/mainWithFunction';
 
 function App() {
 
   // let [isLit, setLit] = useState(true);
-  const isLit = true;
+  const themeHook = useState("lit");
   return (
-    <ThemeContext.Provider value={isLit}>
-      <div className="App">
-        <h1>Continued the bootcamp</h1><br />
-        <Room
-          isLit={isLit}
-          setLit={setLit}
-        />
+    <ThemeContext.Provider value={themeHook}>
+      <div>
+        <Header />
+        <Main />
+
       </div>
     </ThemeContext.Provider>
   )
