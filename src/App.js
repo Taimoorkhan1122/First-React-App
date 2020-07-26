@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
-// import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import './Room.css';
 import Room from './Room.js'
+import ThemeContext from './context/ThemeContext'
 
-function App() { 
-  {/*props is a javascript object and we can properties of  props object just 
-  like normal js objects*/}
-  let [isLit, setLit] = useState(true);
-  return <div className="App">
-      <h1>Continued the bootcamp</h1><br/>
-      <Room 
-        isLit={isLit}
-        setLit={setLit}
-      /> 
-    </div>
+function App() {
 
-} 
+  // let [isLit, setLit] = useState(true);
+  const isLit = true;
+  return (
+    <ThemeContext.Provider value={isLit}>
+      <div className="App">
+        <h1>Continued the bootcamp</h1><br />
+        <Room
+          isLit={isLit}
+          setLit={setLit}
+        />
+      </div>
+    </ThemeContext.Provider>
+  )
+}
 
 export default App;
