@@ -1,17 +1,13 @@
 import React, {useState} from 'react';
 import './Room.css';
 
-// {islit? "Lit":"Dark"}
-function Room() {
-    let [isLit, setLit] = useState(true);
+function Room(props) {
 
-    return <div className={`card ${isLit? "lit": "dark"}`}>
-      <h2>The room is: {isLit? "lit":"dark"} </h2>
+    return <div className={`card ${props.isLit? "lit": "dark"}`}>
+      <h2>The room is: {props.isLit? "lit":"dark"} </h2>
       <br/>
       <p>Toggle dark mode using react useState</p>
-      <button onClick={() => {
-          setLit(!isLit)
-      }}> 
+      <button onClick={() => props.setLit(!props.isLit)}> 
       Toggle light </button>
     </div>
 
